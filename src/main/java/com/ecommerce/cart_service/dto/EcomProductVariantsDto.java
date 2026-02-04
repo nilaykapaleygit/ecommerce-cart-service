@@ -1,13 +1,9 @@
 package com.ecommerce.cart_service.dto;
-
-
-import jakarta.persistence.Column;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
+@AllArgsConstructor
 public class EcomProductVariantsDto {
 	private Long ecomProductVariantsId;
 	private String variantSku;

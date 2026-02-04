@@ -23,5 +23,5 @@ public class EcomCartDto {
     private String status; // ACTIVE, CHECKED_OUT
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
-    private List<EcomCartItem> cartItems;
+    private List<EcomCartItemDto> cartItems;
 }

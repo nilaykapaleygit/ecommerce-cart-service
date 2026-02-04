@@ -6,9 +6,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.ecommerce.cart_service.dto.EcomProductVariantsDto;
 
-@FeignClient(name = "product-service")
+@FeignClient(name = "product-service",
+			 fallbackFactory = ProductFeignFallbackFactory.class)
 public interface ProductFeignClient {
 	
-    @GetMapping("/getProductVariant/{variantId}")
+    @GetMapping("/products/getProductVariant/{variantId}")
     EcomProductVariantsDto getProductVariantById(@PathVariable("variantId") Long variantId);
 }

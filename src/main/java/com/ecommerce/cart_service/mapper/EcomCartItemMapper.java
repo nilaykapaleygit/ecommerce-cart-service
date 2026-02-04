@@ -15,8 +15,7 @@ public class EcomCartItemMapper {
         dto.setQuantity(item.getQuantity());
         dto.setPriceAtAddTime(item.getPriceAtAddTime());
         dto.setCreatedAt(item.getCreatedAt());
-        dto.setCart(item.getCart()); // reference only
-
+        //dto.setCart(EcomCartMapper.mapToEcomCartDto(item.getCart())); // reference only
         return dto;
     }
 
@@ -30,8 +29,7 @@ public class EcomCartItemMapper {
         item.setQuantity(dto.getQuantity());
         item.setPriceAtAddTime(dto.getPriceAtAddTime());
         item.setCreatedAt(dto.getCreatedAt());
-        item.setCart(dto.getCart()); // reference only
-
+        //item.setCart(EcomCartMapper.mapToEcomCart(dto.getCart())); // reference only
         return item;
     }
 }

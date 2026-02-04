@@ -56,16 +56,10 @@ public class EcomCartController {
 	    }
 
 	    // ---------------- GET CART ----------------
-	    @GetMapping("/{userId}")
-	    public EcomCartDto getCartByUser(
-	            @PathVariable Long userId) {
+	    @GetMapping("/getCartByUser/{userId}")
+	    public EcomCartDto getCartByUser(@PathVariable Long userId) {
 	        return cartService.getCartByUserId(userId);
 	    }
 
-	    // ---------------- CHECKOUT ----------------
-	    @PostMapping("/checkout")
-	    public EcomCartCheckoutResponse checkout(
-	            @RequestBody EcomCartCheckoutRequest request) {
-	        return cartService.checkout(request);
-	    }
+
 }

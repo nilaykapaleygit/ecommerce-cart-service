@@ -21,7 +21,7 @@ import lombok.Setter;
 @Data
 public class EcomCartItemDto {
     private Long cartItemId;
-    private EcomCart cart;
+    //private EcomCartDto cart;
     private Long productId;
     private Long productVariantId;
     private Integer quantity;
